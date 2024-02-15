@@ -10,6 +10,7 @@ namespace SojaExiles
 
 		public Animator openandclose;
 		public bool open;
+		public bool unlocked = false;
 		public Transform Player;
 
 		void Start()
@@ -20,30 +21,25 @@ namespace SojaExiles
 		void OnMouseOver()
 		{
 			{
-				if (Player)
-				{
-					float dist = Vector3.Distance(Player.position, transform.position);
-					if (dist < 15)
-					{
-						if (open == false)
-						{
-							if (Input.GetMouseButtonDown(0))
-							{
-								StartCoroutine(opening());
-							}
-						}
-						else
-						{
-							if (open == true)
-							{
-								if (Input.GetMouseButtonDown(0))
-								{
-									StartCoroutine(closing());
+				if (unlocked) {
+					if (Player) {
+						float dist = Vector3.Distance(Player.position, transform.position);
+						if (dist < 10) {
+							if (open == false) {
+								if (Input.GetMouseButtonDown(0)) {
+									StartCoroutine(opening());
 								}
 							}
+							else {
+								if (open == true) {
+									if (Input.GetMouseButtonDown(0)) {
+										StartCoroutine(closing());
+									}
+								}
+
+							}
 
 						}
-
 					}
 				}
 
