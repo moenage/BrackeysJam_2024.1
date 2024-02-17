@@ -9,14 +9,9 @@ namespace SojaExiles
 	{
 
 		public Animator openandclose;
-		public bool open;
-		public bool unlocked = false;
+		public bool open = false;
+        public bool unlocked = false;
 		public Transform Player;
-
-		void Start()
-		{
-			open = false;
-		}
 
 		void OnMouseOver()
 		{
@@ -63,6 +58,10 @@ namespace SojaExiles
 			yield return new WaitForSeconds(.5f);
 		}
 
+        public void UnlockDoor() {
+			unlocked = true;
+		}
 
-	}
+
+    }
 }
