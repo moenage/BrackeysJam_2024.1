@@ -50,7 +50,6 @@ public class ArrowController : MonoBehaviour
             rendererArray[count] = child.GetComponent<Renderer>();
             clickedArray[count] = child.GetComponent<ArrowClicked>();
             count++;
-            Debug.Log("Child Name: " + child.name);
         }
     }
 
