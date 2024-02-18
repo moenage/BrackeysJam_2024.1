@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 397643c16f2f8f94aad5a7a1c2c57a42
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kode Mono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c66967f4412dbd5409e4f8d47071e702, type: 3}
+  - {fileID: 12800000, guid: 06fd77d1a4189984c82fff5fb828fefa, type: 3}
+  - {fileID: 12800000, guid: 019c6824c7765914da7547db7a2c9474, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

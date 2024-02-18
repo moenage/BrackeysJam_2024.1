@@ -7,8 +7,13 @@ public class MorseController : MonoBehaviour {
 
     private opencloseDoor doorScript;
 
+    private AudioSource audioSource;
+    public AudioClip correctAnswerSound;
+
     // Start is called before the first frame update
     void Start() {
+        audioSource = GetComponent<AudioSource>();
+
         // Try to get the opencloseDoor script when the MorseController is initialized
         doorScript = door.GetComponent<opencloseDoor>();
 
@@ -22,6 +27,7 @@ public class MorseController : MonoBehaviour {
         if (completedMorse == 3 && doorScript != null) {
             // Unlock door by setting the boolean value to true
             doorScript.UnlockDoor();
+            audioSource.PlayOneShot(correctAnswerSound);
         }
     }
 
