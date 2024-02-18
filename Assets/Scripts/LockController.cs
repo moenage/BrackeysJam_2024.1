@@ -10,9 +10,6 @@ public class LockController : MonoBehaviour
 
     private opencloseDoor doorScript;
 
-    private AudioSource audioSource;
-    public AudioClip lockSound;
-    public AudioClip correctAnswerSound;
 
 
     public int[] correctCombo = { 6, 1, 7 };
@@ -20,7 +17,6 @@ public class LockController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         doorScript = door.GetComponent<opencloseDoor>();
 
         if (doorScript == null) {
@@ -52,7 +48,6 @@ public class LockController : MonoBehaviour
 
             //Debug.Log("DONEZOOOOOOOOOO");
             doorScript.UnlockDoor();
-            audioSource.PlayOneShot(correctAnswerSound);
             LockPadScript.Rotated -= CheckPad;
 
         }

@@ -28,7 +28,6 @@ public class ArrowController : MonoBehaviour
 
     private AudioSource audioSource;
     public AudioClip wrongAnswerSound;
-    public AudioClip correctAnswerSound;
 
     void Start() {
 
@@ -105,7 +104,6 @@ public class ArrowController : MonoBehaviour
 
             if (correctOrder) {
                 doorScript.UnlockDoor();
-                audioSource.PlayOneShot(correctAnswerSound);
             }
 
             else {

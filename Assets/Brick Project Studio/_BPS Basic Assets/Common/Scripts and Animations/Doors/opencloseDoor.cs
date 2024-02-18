@@ -13,7 +13,15 @@ namespace SojaExiles
         public bool unlocked = false;
 		public Transform Player;
 
-		void OnMouseOver()
+        private AudioSource audioSource;
+        public AudioClip correctAnswerSound;
+
+
+        private void Start() {
+            audioSource = GetComponent<AudioSource>();
+        }
+
+        void OnMouseOver()
 		{
 			{
 				if (unlocked) {
@@ -60,7 +68,8 @@ namespace SojaExiles
 
         public void UnlockDoor() {
 			unlocked = true;
-		}
+            audioSource.PlayOneShot(correctAnswerSound);
+        }
 
 
     }
